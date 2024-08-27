@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    View All
+{% endblock %}
+
+{% block main %}
+
+<link href="/static/styles.css" type="text/css" rel="stylesheet">
+
+<h3>Notes</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Notes</th>
+      <th scope="col">Priority</th>
+      <th scope="col">Entry Date</th>
+    </tr>
+  </thead>
+  <tbody>
+      {% for row in notes_database %}
+          <tr>
+              <td>{{ row["Content"] }}</td>
+              <td>{{ row["Priority"] }}</td>
+              <td>{{ row["Date"] }}</td>
+          </TR>
+          {% endfor %}
+      </tr>
+  </tbody>
+</table>
+
+<br></br>
+
+<h3>Reminders</h3>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Reminders</th>
+        <th scope="col">Priority</th>
+        <th scope="col">Completion Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in reminders_database %}
+          <tr>
+              <td>{{ row["Content"] }}</td>
+              <td>{{ row["Priority"] }}</td>
+              <td>{{ row["Completion_Date"] }}</td>
+          </TR>
+          {% endfor %}
+      </tr>
+  </tbody>
+</table>
+
+<br></br>
+
+<h3>Tasks</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Events</th>
+      <th scope="col">Completion Date</th>
+      <th scope="col">Completion Time</th>
+      <th scope="col">Input Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in todo_database %}
+        <tr>
+            <td>{{ row["Content"] }}</td>
+            <td>{{ row["Completion Date"] }}</td>
+            <td>{{ row["Time"] }}</td>
+            <td>{{ row["Input_Date"] }}</td>
+        </TR>
+        {% endfor %}
+    </tr>
+</tbody>
+</table>
+
+{% endblock %}

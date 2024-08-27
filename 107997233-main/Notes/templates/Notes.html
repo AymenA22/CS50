@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Notes
+{% endblock %}
+
+{% block main %}
+
+<link href="/static/styles.css" type="text/css" rel="stylesheet">
+
+<h3> Notes</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Notes</th>
+      <th scope="col">Priority</th>
+      <th scope="col">Completion Date</th>
+      <th scope="col">Complete</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in notes_database %}
+      <tr>
+        <td>{{ row["Content"] }}</td>
+        <td>{{ row["Priority"] }}</td>
+        <td>{{ row["Date"] }}</td>
+        <td>
+          <form action="{{ ('complete_note') }}" method="post">
+            <input type="hidden" name="id" value="{{ row["id"] }}">
+            <input type="submit" value="✓">
+          </form>
+        </td>
+        <td>
+          <form action="{{ ('delete_note') }}" method="post">
+            <input type="hidden" name="id" value="{{ row["id"] }}">
+              <input type="submit" value="X">
+          </form>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+<h3>Archive</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Notes</th>
+      <th scope="col">Priority</th>
+      <th scope="col">Entry Date</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in notes_archive_database %}
+      <tr>
+        <td>{{ row["Content"] }}</td>
+        <td>{{ row["Priority"] }}</td>
+        <td>{{ row["Date"] }}</td>
+        <td>
+          <form action="{{ ('delete_note_archive') }}" method="post">
+            <input type="hidden" name="id" value="{{ row["id"] }}">
+              <input type="submit" value="X">
+          </form>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

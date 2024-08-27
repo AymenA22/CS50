@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Funds
+{% endblock %}
+
+{% block main %}
+
+<link href="/static/styles.css" type="text/css" rel="stylesheet">
+
+<h1>Add Event</h1>
+    <form action="/Add" method="POST">
+        <div class="mb-3">
+
+            <input type="checkbox" id="Note" name="Note" value="Note" checked>
+            <label for="note">Note</label>
+            <input type="checkbox" id="Reminder" name="Reminder" value="Reminder">
+            <label for="reminder">Reminder</label>
+            <input type="checkbox" id="To-Do" name="To-Do" value="To-Do">
+            <label for="To-Do">To-Do</label>
+
+            <br></br>
+
+            <input autocomplete="off" autofocus class="form-control mx-auto" name="Event" placeholder="Enter text..." type="Text" required>
+
+            <br></br>
+
+            <div> Priority
+                <label for="priority">Priority:</label>
+                <select name="priority" id="priority">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+
+            <br></br>
+
+            <div> Completion Date <input autocomplete="on" name="Date" placeholder="Date" Type="date"></div>
+
+            <br></br>
+
+            <div> Completion Time <input autocomplete="on" name="Time" placeholder="Time" Type="time"></div>
+        </div>
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+{% endblock %}

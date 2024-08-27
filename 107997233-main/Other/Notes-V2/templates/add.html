@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Funds
+{% endblock %}
+
+{% block main %}
+<h1>Add Event</h1>
+    <form action="/Add" method="POST">
+        <div class="mb-3">
+
+            <input type="radio" id="Note" name="input" value="Note">
+            <label for="note">Note</label>
+            <input type="radio" id="Reminder" name="input" value="Reminder">
+            <label for="reminder">Reminder</label>
+            <input type="radio" id="To-Do" name="input" value="To-Do">
+            <label for="To-Do">To-Do</label>
+
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="Event" placeholder="Enter text..." type="Text">
+            <p></p>
+            <div>
+                Completion Date <input autocomplete="on" name="Date" placeholder="Date" Type="date">
+            </div>
+            <p></p>
+            <div>
+                Completion Time <input autocomplete="on" name="Time" placeholder="Time" Type="time">
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+{% endblock %}

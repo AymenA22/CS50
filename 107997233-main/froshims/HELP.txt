@@ -1,0 +1,8 @@
+sqlite3 birthdays.db
+
+examples
+
+SELECT * FROM birthdays;
+
+SELECT name FROM birthdays LIMIT 5;
+

@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    To-Do
+{% endblock %}
+
+{% block main %}
+
+<link href="/static/styles.css" type="text/css" rel="stylesheet">
+
+<h3>To-Do</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Task</th>
+      <th scope="col">Completion Date</th>
+      <th scope="col">Input Date</th>
+      <th scope="col">Completed</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in todo_database %}
+      <tr>
+        <td>{{ row["Content"] }}</td>
+        <td>{{ row["Completion_Date"] }}</td>
+        <td>{{ row["Input_Date"] }}</td>
+        <td>
+          <form action="{{ ('complete_ToDo') }}" method="post">
+            <input type="hidden" name="id" value="{{ row["id"] }}">
+              <input type="submit" value="✓">
+          </form>
+        </td>
+        <td>
+          <form action="{{ ('delete_ToDo') }}" method="post">
+            <input type="hidden" name="id" value="{{ row["id"] }}">
+              <input type="submit" value="X">
+          </form>
+        </td>
+      </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+
+<h3>Archive</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Task</th>
+      <th scope="col">Completion Date</th>
+      <th scope="col">Input Date</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in todo_archive_database %}
+      <tr>
+        <td>{{ row["Content"] }}</td>
+        <td>{{ row["Completion Date"] }}</td>
+        <td>{{ row["Input_Date"] }}</td>
+        <td>
+          <form action="{{ ('delete_ToDo_archive') }}" method="post">
+            <input type="hidden" name="id" value="{{ row["id"] }}">
+              <input type="submit" value="X">
+          </form>
+        </td>
+      </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+{% endblock %}

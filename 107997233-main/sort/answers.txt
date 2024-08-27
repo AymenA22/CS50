@@ -1,0 +1,13 @@
+sort1 uses: Bubble
+
+How do you know?: Worst case is O(n^2) and best is Omega(n). Therefore, large sorted data will sort quickly, while large
+                    unsorted data will still be of the order of n which could take longer.
+
+sort2 uses: Merge
+
+How do you know?: Short but roughly equal time for all combination of sequences which is true of Theta(n log n).
+
+sort3 uses: Selection
+
+How do you know?: With Theta (n^2) selection sort is expected to take the longest in all data types with increasing time for
+                    longer data sizes. This is reflected in the solving time when using sort3.

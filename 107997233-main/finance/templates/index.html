@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Symbol</th>
+        <th scope="col">Shares</th>
+        <th scope="col">Price</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for row in transactions_database %}
+            <tr>
+                <td>{{ row["symbol"] }}</td>
+                <td>{{ row["shares"] }}</td>
+                <td>${{ row["price"] }}</td>
+                <td>${{ "{:.2f}".format(row["shares"] * row["price"]) }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Remaining Cash</td>
+            <td>${{ cash }}</td>
+        </tr>
+    </tfoot>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Total Value of Shares</td>
+            <td>${{ total }}</td>
+            <td></td>
+        </tr>
+    </tfoot>
+  </table>
+{% endblock %}

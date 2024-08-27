@@ -1,0 +1,35 @@
+10 HTML Tags (minimum)
+<html>
+<link>
+<script>
+<title>
+<head>
+<nav>
+<body>
+<li>
+<form>
+<input>
+<button>
+<ul>
+<div>
+<h1>
+<h2>
+<h5>
+<p>
+<table>
+<tr>
+<th>
+<td>
+
+5 CSS Properties
+background-color: #1f69e0;
+width: 80%;
+font-family: arial;
+font-size: 40px;
+text-emphasis: underline;
+
+How I chose to use JavaScript and Bootstrap?
+Javascript was added to interpret the form entry
+
+Bootstrap was used for site navigation to look nicer
+

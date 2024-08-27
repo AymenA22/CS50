@@ -1,0 +1,17 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+SELECT AVG(energy), AVG(danceability), AVG(valence) FROM songs;
++-------------+-------------------+--------------+
+| AVG(energy) | AVG(danceability) | AVG(valence) |
++-------------+-------------------+--------------+
+| 0.65906     | 0.71646           | 0.484443     |
++-------------+-------------------+--------------+
+
+The overlap between the three ratings shows that this listener prefers above average energy and danceability but with a below average musical positivness.
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+
+There are many other factors that should be taken into consideration when trying to identify a users ideal aura, including but not limited to the length of time, or how
+many songs were listened to with each specific characteristic descriptor.
+
+This data could then be weighted to more accurately identify the users preference.

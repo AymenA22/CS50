@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+
+<link href="/static/styles.css" type="text/css" rel="stylesheet">
+
+    <!-- https://memegen.link/ -->
+    <!-- https://www.supercars.net/blog/wp-content/uploads/2019/07/nismo-400r-hero-1001x565.jpg -->
+    <img alt="{{ top }}" class="border img-fluid" src="https://api.memegen.link/images/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?background=https://www.supercars.net/blog/wp-content/uploads/2019/07/nismo-400r-hero-1001x565.jpg&width=500" title="{{ top }}">
+
+{% endblock %}

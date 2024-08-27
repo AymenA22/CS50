@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Bike
+{% endblock %}
+
+{% block main %}
+<h1>Add Bike</h1>
+    <form action="/add" method="POST">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Manfacturer" type="text" required>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Name" type="text" required>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Year" type="number" min="0" required>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Top Tube" type="number" min="0" required>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Down Tube" type="number" min="0" required>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Steerer Tube Angle" type="number" min="0" required>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Steerer Tube Length" type="number" min="0" required>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Wheel Size (inch)" type="number" min="0" required>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Stem Length" type="number" min="0" required>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Rear Stay Length" type="number" min="0" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Add to Database</button>
+    </form>
+{% endblock %}

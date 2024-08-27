@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    View
+{% endblock %}
+
+{% block main %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Reminder</th>
+      <th scope="col">Completion Date</th>
+      <th scope="col">Completed</th>
+      <th scope="col">Date Completed</th>
+    </tr>
+  </thead>
+  <tbody>
+      {% for row in transactions_database %}
+          <tr>
+              <td>{{ row["symbol"] }}</td>
+              <td>{{ row["shares"] }}</td>
+              <td>${{ row["price"] }}</td>
+              <td>{{ row["date"] }}</td>
+          </TR>
+          {% endfor %}
+      </tr>
+  </tbody>
+</table>
+{% endblock %}

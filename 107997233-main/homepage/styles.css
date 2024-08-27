@@ -1,0 +1,264 @@
+/* =====================================
+Apply a font alteration to a span function called #name
+=====================================*/
+#name {
+    font-family: arial;
+    font-size: 40px;
+    text-emphasis: underline;
+    color: white;
+    opacity: 0.8;
+}
+
+/* =====================================
+change the font of the .about class to cursive
+=====================================*/
+.about {
+    font-family: cursive;
+}
+
+/* =====================================
+change the global heading h3 to the colour white
+=====================================*/
+h1 {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+}
+
+/* =====================================
+change the global headings h3, h4, h5, h6 to the colour #ffffff
+=====================================*/
+h2, h3, h4, h5, h6 {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #ffffff;
+}
+
+/* =====================================
+change the colour of a list as you hover over the link to blue
+=====================================*/
+li:hover {
+    color: blue;
+}
+
+/* ============================
+=========
+change the heading h4 in the about section to orange
+=====================================*/
+h4.about {
+    color: orange;
+}
+
+/* =====================================
+change the p padding in the about section to orange
+=====================================*/
+p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* =====================================
+Container
+=====================================*/
+.container {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* =====================================
+Section
+=====================================*/
+.section {
+    padding: 15px 1rem 1rem 1rem;
+}
+
+/* =====================================
+Header
+=====================================*/
+.header {
+    background-color: #06152d;
+    color: #fff;
+    margin-bottom: 24px;
+    padding: 24px 1rem;
+    text-align: center;
+}
+
+/* =====================================
+Footer
+=====================================*/
+#footer {
+    color: #ffffff;
+}
+
+/* =====================================
+Contact Me
+=====================================*/
+#contact {
+    color: white;
+}
+
+div.frame {
+    width: 50%;
+    background-color: grey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 10px;
+  }
+
+div.image_container {
+    text-align: center;
+    padding: 10px 10px;
+  }
+
+
+  .cs50xtab {
+    width: "auto";
+  }
+
+  .scaled {
+    transform: scale(0.8); /* Equal to scaleX(0.7) scaleY(0.7) */
+  }
+
+/* =====================================
+Homepage
+=====================================*/
+.home-background {
+    margin: 0;
+    padding: 0;
+    background-color: #1f69e0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.outer {
+    width: 200px;
+    margin-left: 10px
+    /* 0 auto; */
+    /* background-color: yellow; */
+}
+
+.inner {
+    margin-left: 20px;
+    /* background-color: grey; */
+}
+
+/* =====================================
+CS50x Page
+=====================================*/
+.cs50x-background {
+    /*background-color: #1f69e0;*/
+    background-image: url('/images/carbon2.jpg')
+}
+
+/* =====================================
+Scroll to Top
+=====================================*/
+#scroll {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 50;
+    font-size: 18px;
+    background-color: red;
+    color: white;
+    padding: 14px;
+    border-radius: 20px;
+}
+
+#scroll:hover {
+    background-color: #cfcfcf;
+    color: black;
+    font-weight: bold;
+}
+
+/* =====================================
+Table Layout
+=====================================*/
+#table {
+    width:70%;
+    margin: 10px;
+    padding-left 50px;
+    padding-right 50px;
+}
+
+table {
+    background-color: black;
+    width: 80%;
+    margin: 30px;
+    text-align: center;
+    align-self: center;
+    border: 2px white;
+}
+
+th, td {
+    padding: 25px;
+    color: white;
+    font-size: 20px;
+    border: 2px solid white;
+}
+
+.summary {
+    font-size: 15px;
+    text-align: left;
+}
+
+/* =====================================
+Navigation Bar
+=====================================*/
+.navBar {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    background-color: #000;
+    color: #FFF
+}
+
+/* Navigation Text on NavBar */
+.brand-title {
+    margin: 0 5px;
+    padding-right: 35px;
+    color: #FFF;
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.brand-title:hover {
+    color: #FFF;
+}
+
+.navBar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navBar-links li {
+    list-style: none;
+}
+
+.navBar-links li a {
+    color: #EEE;
+    display: flex;
+    padding: 1rem;
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-decoration: none;
+    transition: 0.6s ease-in-out;
+}
+
+.navBar-links li a:hover {
+    transform: translateY(5%);
+    color: #111;
+    background-color: #CCC;
+    border-top: 1pt solid grey;
+}
+
+/* =====================================
+Navigation Bar
+=====================================*/

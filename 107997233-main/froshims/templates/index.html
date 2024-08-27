@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <h1>Register</h1>
+    <form action="/register" method="post">
+        <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+        <select name="sport">
+            <!--Add an option to the top of the list that cannot be selected but does not guide the user to the first sport (bias)-->
+            <option disabled selected value="">Sport</option>
+            <!--Add JINJA PYTHON code to include a for statement-->
+            <!-- this will look in APP.PY for SPORTS which should be included in the @APP.ROUTE for INDEX-->
+            {% for sport in sports %}
+                <!-- the value="{{ sport }}" shows what the server side sees, the white text is what the user sees -->
+                <option value="{{ sport }}">{{ sport }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Register</button>
+    </form>
+
+{% endblock%}
